@@ -1,6 +1,6 @@
 # nvoip-curl-examples
 
-Exemplos isolados em `curl` para os fluxos principais da API v2 da Nvoip.
+Exemplos oficiais da [Nvoip](https://www.nvoip.com.br/) em `curl` para OAuth, chamadas, OTP, WhatsApp, SMS e saldo na API v2.
 
 ## Objetivo
 

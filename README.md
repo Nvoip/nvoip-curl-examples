@@ -25,12 +25,6 @@ export NVOIP_OAUTH_CLIENT_ID="seu_client_id"
 export NVOIP_OAUTH_CLIENT_SECRET="seu_client_secret"
 ```
 
-Se a sua operação já armazena o header serializado, você também pode usar:
-
-```bash
-export NVOIP_OAUTH_BASIC_AUTH="basic_auth_base64"
-```
-
 ## Fluxos cobertos
 
 - gerar `access_token`

@@ -16,11 +16,6 @@ nvoip_encode_basic_auth() {
 }
 
 nvoip_resolve_basic_auth() {
-  if [ -n "${NVOIP_OAUTH_BASIC_AUTH:-}" ]; then
-    printf '%s\n' "$NVOIP_OAUTH_BASIC_AUTH"
-    return 0
-  fi
-
   nvoip_require_var NVOIP_OAUTH_CLIENT_ID || return 1
   nvoip_require_var NVOIP_OAUTH_CLIENT_SECRET || return 1
   nvoip_encode_basic_auth "$NVOIP_OAUTH_CLIENT_ID" "$NVOIP_OAUTH_CLIENT_SECRET"

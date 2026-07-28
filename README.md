@@ -49,6 +49,14 @@ export NVOIP_OAUTH_CLIENT_SECRET="seu_client_secret"
 - `sh examples/list-whatsapp-templates.sh`
 - `sh examples/send-whatsapp-template.sh`
 
+### Destinatário WhatsApp
+
+O exemplo mantém `NVOIP_WA_DESTINATION` para telefone. Para o contrato tipado,
+use `NVOIP_WA_RECIPIENT_TYPE=phone|bsuid|parent_bsuid` e
+`NVOIP_WA_RECIPIENT_VALUE`, sem `destination`. BSUID é opaco; não use
+`@username` nem o coloque em campo de telefone. Exemplos mascarados:
+`US.MASKED_BSUID_001` e `PARENT.MASKED_BSUID_001`.
+
 ## Observações
 
 - este repositório é propositalmente enxuto e orientado a copy/paste

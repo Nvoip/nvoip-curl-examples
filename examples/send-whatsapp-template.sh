@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-NVOIP_BASE_URL="${NVOIP_BASE_URL:-https://api.nvoip.com.br/v2}"
+NVOIP_BASE_URL="${NVOIP_BASE_URL:-https://api.nvoip.com.br/v3}"
 : "${NVOIP_ACCESS_TOKEN:?Missing NVOIP_ACCESS_TOKEN}"
 : "${NVOIP_WA_TEMPLATE_ID:?Missing NVOIP_WA_TEMPLATE_ID}"
 : "${NVOIP_WA_INSTANCE:?Missing NVOIP_WA_INSTANCE}"
@@ -65,7 +65,7 @@ else
   RECIPIENT_JSON="\"destination\":\"$NVOIP_WA_DESTINATION\""
 fi
 
-curl -sS \
+curl --fail-with-body -sS \
   --request POST \
   --header "Authorization: Bearer $NVOIP_ACCESS_TOKEN" \
   --header "Content-Type: application/json" \

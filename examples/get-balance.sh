@@ -12,7 +12,7 @@ nvoip_require_var() {
 
 nvoip_require_var NVOIP_ACCESS_TOKEN
 
-curl -sS \
+curl --fail-with-body -sS \
   --request GET \
   --header "Authorization: Bearer $NVOIP_ACCESS_TOKEN" \
-  "${NVOIP_BASE_URL:-https://api.nvoip.com.br/v2}/balance"
+  "${NVOIP_BASE_URL:-https://api.nvoip.com.br/v3}/balance"

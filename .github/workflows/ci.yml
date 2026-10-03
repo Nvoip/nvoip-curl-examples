@@ -1,0 +1,9 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  request-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s tests
+      - run: for script in lib/*.sh examples/*.sh; do sh -n "$script"; done
